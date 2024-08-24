@@ -13,7 +13,6 @@ function App() {
         <div className='loading hidden'>
           <Navbar />
           <Background_slider />
-          
       </div>
       </div>
     )

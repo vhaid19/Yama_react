@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react';
+import Background_slider from './Background_slider';
 import { IoMdMail } from "react-icons/io";
 import { MdPermContactCalendar } from "react-icons/md";
 import { IoMdTime } from "react-icons/io";
@@ -26,6 +27,15 @@ function Navbar() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const [minimenu, setMinimenu] = useState(false)
+  const handleminimenu = ()=>{
+    setMinimenu(true)
+  }
+  const handleminimenus = ()=>{
+    setMinimenu(false)
+  }
+  
 
   return (
     <div>
@@ -65,9 +75,15 @@ function Navbar() {
               <li className='px-3'>
                 <a href="">About</a>
               </li>
-              <li className='px-3'> 
+              <li className='px-3' id='services'> 
                 <a href="">Services</a>
               </li>
+              <ul className=' flex-col top-32 md:right-[18rem] absolute z-10 p-7 rounded-lg gap-4'>
+                      <li><a href=""> Constructions </a></li>
+                      <li><a href=""> Consultancy</a></li>
+                      <li><a href=""> Trunkey solutions </a></li>
+                      <li><a href=""> Project Management </a></li>
+                    </ul>
               <li className='px-3'>
                 <a href="">Project</a>
               </li>
@@ -90,6 +106,7 @@ function Navbar() {
           </div>
         </div>
       </nav>
+      <Background_slider className='bg-red-800' />
     </div>
   )
 }
