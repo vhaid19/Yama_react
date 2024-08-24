@@ -41,7 +41,7 @@ function Background_slider() {
             // showBullets={true}
             // showNavs={true}
             autoPlay={true}
-            onStartSlide={(index, length) => {
+            onStartSlide={(index) => {
               setImageNum(index)
             }}
             autoPlayDelay={3}
