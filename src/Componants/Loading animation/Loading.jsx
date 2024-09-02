@@ -1,5 +1,5 @@
 import React from 'react'
-import './Css/Loading.css'
+import './Loading.css'
 function Loading() {
     window.addEventListener("load", ()=>{
         document.getElementById("loading").style.display = "none";

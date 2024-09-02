@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Background_slider from './Background_slider';
+// import Background_slider from './Background_slider';
 import { IoMdMail } from "react-icons/io";
 import { MdPermContactCalendar } from "react-icons/md";
 import { IoMdTime } from "react-icons/io";
@@ -78,7 +78,7 @@ function Navbar() {
               <li className='px-3' id='services'> 
                 <a href="">Services</a>
               </li>
-              <ul className=' flex-col top-32 md:right-[18rem] absolute z-10 p-7 rounded-lg gap-4'>
+              <ul className=' hidden flex-col top-32 md:right-[18rem] absolute z-10 p-7 rounded-lg gap-4'>
                       <li><a href=""> Constructions </a></li>
                       <li><a href=""> Consultancy</a></li>
                       <li><a href=""> Trunkey solutions </a></li>
@@ -106,7 +106,7 @@ function Navbar() {
           </div>
         </div>
       </nav>
-      <Background_slider className='bg-red-800' />
+      {/* <Background_slider className='bg-red-800' /> */}
     </div>
   )
 }
