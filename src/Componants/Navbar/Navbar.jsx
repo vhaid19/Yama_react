@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Sub_menu from './Sub_menu';
 // import Background_slider from './Background_slider';
 import { IoMdMail } from "react-icons/io";
 import { MdPermContactCalendar } from "react-icons/md";
@@ -29,14 +30,15 @@ function Navbar() {
   };
 
   const [minimenu, setMinimenu] = useState(false)
-  const handleminimenu = ()=>{
+  const handleminimenu = () => {
     setMinimenu(true)
   }
-  const handleminimenus = ()=>{
+  const handleminimenus = () => {
     setMinimenu(false)
   }
-  
 
+
+  const [Show, setShow] = useState(false)
   return (
     <div>
       <nav className='w-full h-32 bg-transparent flex flex-col max-[714px]:h-16'>
@@ -75,15 +77,12 @@ function Navbar() {
               <li className='px-3'>
                 <a href="">About</a>
               </li>
-              <li className='px-3' id='services'> 
+              <li className='px-3 h-auto' id='services' onMouseEnter={()=>{
+               setShow(!Show)
+              }}>
                 <a href="">Services</a>
               </li>
-              <ul className=' hidden flex-col top-32 md:right-[18rem] absolute z-10 p-7 rounded-lg gap-4'>
-                      <li><a href=""> Constructions </a></li>
-                      <li><a href=""> Consultancy</a></li>
-                      <li><a href=""> Trunkey solutions </a></li>
-                      <li><a href=""> Project Management </a></li>
-                    </ul>
+                {Show && <Sub_menu id='sub_menu' />}
               <li className='px-3'>
                 <a href="">Project</a>
               </li>
@@ -95,7 +94,7 @@ function Navbar() {
           <div className="menuicon w-20 h-full md:hidden flex items-center transition ease-in-out delay-150 fill-white">
             <div>
               <IoMenuOutline onClick={handleClick} className='z-20 bg-transparent cursor-pointer menu w-20 h-9 text-white text-[40px]' id="basic-button" />
-              <Menu anchorEl={anchorEl} open={open} onClose={handleClose} PaperProps={{ style:{backgroundColor: 'transparent', color: "orange", width: '400px', left: '0px', display: 'flex', justifyContent: 'center', textAlign: 'center' }}}>
+              <Menu anchorEl={anchorEl} open={open} onClose={handleClose} PaperProps={{ style: { backgroundColor: 'transparent', color: "orange", width: '400px', left: '0px', display: 'flex', justifyContent: 'center', textAlign: 'center' } }}>
                 <MenuItem sx={{ fontSize: '20px', textTransform: 'uppercase' }} onClick={handleClose} href=''>Home</MenuItem>
                 <MenuItem sx={{ fontSize: '20px', textTransform: 'uppercase' }} onClick={handleClose} href=''>About</MenuItem>
                 <MenuItem sx={{ fontSize: '20px', textTransform: 'uppercase' }} onClick={handleClose} href=''>Services</MenuItem>
