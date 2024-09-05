@@ -15,6 +15,13 @@ function App() {
           <Navbar />
           {/* <Sub_menu /> */}
           <Background_slider />
+          <div className="short_info w-full h-full flex justify-evenly">
+            <div className="short_info_left w-1/2 h-full flex flex-col justify-center
+            items-center"></div>
+            <div className="short_info_right w-1/2 h-full flex flex-col justify-center
+            items-center"></div>
+
+          </div>
       </div>
       </div>
     )
