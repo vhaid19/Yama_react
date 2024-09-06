@@ -61,11 +61,11 @@ function Navbar() {
             </div>
           </div>
           <div className="office_social max-w-md md:flex hidden gap-2">
-            <AiFillInstagram className='w-10 h-10 fill-[#C13584]' />
-            <AiFillFacebook className='w-10 h-10 fill-[#316FF6]' />
-            <AiFillLinkedin className='w-10 h-10 fill-[#0072b1]' />
-            <AiFillTwitterCircle className='w-10 h-10 fill-[#08a0e9]' />
-            <FaSquareWhatsapp className='w-10 h-10 fill-[#075E54]' />
+            <a href=""><AiFillInstagram className='w-10 h-10 fill-[#C13584]' /></a>
+            <a href="https://www.facebook.com/yamaconstructions/"><AiFillFacebook className='w-10 h-10 fill-[#316FF6]' /></a>
+            <a href="https://www.linkedin.com/company/yamaconstructions"><AiFillLinkedin className='w-10 h-10 fill-[#0072b1]' /></a>
+            <a href=""><AiFillTwitterCircle className='w-10 h-10 fill-[#08a0e9]' /></a>
+            <a href="https://wa.me/9822069723"><FaSquareWhatsapp className='w-10 h-10 fill-[#075E54]' /></a>
           </div>
         </div>
         <div className="navbar2 w-full h-16 bg-transparent flex items-center justify-end text-center">
